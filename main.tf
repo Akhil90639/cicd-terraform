@@ -8,10 +8,10 @@ module "vpc" {
 }
 
 module "ec2" {
-  source = "./ec2"
-  kp_pb_sg  = module.vpc.kp_pb_sg
-  kp_pb_sn  = module.vpc.kp_pb_sn
-  key    = "XXXX"
+  source   = "./ec2"
+  kp_pb_sg = module.vpc.kp_pb_sg
+  kp_pb_sn = module.vpc.kp_pb_sn
+  key      = "keypair"
   #pt_sg  = module.vpc.pt_sg
   #pt_sn  = module.vpc.pt_sn
   #alb_tg = module.lb.alb_tg
